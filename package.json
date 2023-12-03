@@ -1,0 +1,109 @@
+{
+  "name": "gatsby-theme-carbon-workspace",
+  "private": true,
+  "repository": {
+    "url": "git@github.com:carbon-design-system/gatsby-theme-carbon.git",
+    "type": "git"
+  },
+  "license": "Apache 2.0",
+  "engines": {
+    "node": "18.x"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "yarn workspace example dev",
+    "dev:clean": "yarn workspace example dev:clean",
+    "build": "yarn workspace example build",
+    "build:clean": "yarn workspace example build:clean",
+    "build:prefix": "yarn workspace example build --prefix-paths",
+    "serve": "yarn build && yarn workspace example serve",
+    "serve:prefix": "yarn build:prefix && yarn workspace example serve --prefix-paths",
+    "now-build": "yarn workspace example build",
+    "format": "prettier --write \"**/*.{css,scss,json,html,yaml,mdx}\"",
+    "format:ci": "prettier --check \"**/*.{css,scss,json,html,yaml,mdx}\"",
+    "lint": "eslint . && stylelint \"packages/**/*.scss\"",
+    "lint:fix": "yarn lint:js && yarn lint:scss",
+    "lint:js": "eslint . --fix",
+    "lint:scss": "stylelint \"packages/**/*.scss\" --fix",
+    "release": "release-it",
+    "release:pre": "release-it --preRelease=next",
+    "release:ci": "release-it --ci",
+    "release:dry": "release-it --dry-run",
+    "validate": "yarn format:ci && yarn lint"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "release-it": {
+    "plugins": {
+      "release-it-yarn-workspaces": {
+        "skipChecks": true
+      },
+      "@release-it/conventional-changelog": {
+        "preset": "conventionalcommits",
+        "infile": "CHANGELOG.md"
+      }
+    },
+    "github": {
+      "release": true
+    },
+    "git": {
+      "pushRepo": "git@github.com:carbon-design-system/gatsby-theme-carbon.git",
+      "commitMessage": "chore: release ${version} [skip ci],"
+    },
+    "npm": false
+  },
+  "eslintIgnore": [
+    "**/node_modules/",
+    "**/public/",
+    "**/.cache/",
+    "**/build/"
+  ],
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint --edit $HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix"
+    ],
+    "*.{css,scss,json,html,yaml}": [
+      "prettier --write"
+    ],
+    "*.{css,scss}": [
+      "stylelint --fix"
+    ]
+  },
+  "dependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@release-it/conventional-changelog": "^2.0.1",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-config-wesbos": "0.0.19",
+    "eslint-plugin-html": "^6.2.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-prettier": "^3.4.1",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^4.3.8",
+    "lerna": "^7.4.2",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.8.8",
+    "prettier-config-carbon": "^0.11.0",
+    "release-it": "^14.14.3",
+    "release-it-yarn-workspaces": "^2.0.1",
+    "stylelint": "^15.11.0",
+    "stylelint-config-recommended-scss": "^12.0.0",
+    "stylelint-scss": "^5.3.0"
+  },
+  "version": "3.1.34",
+  "packageManager": "yarn@3.3.0"
+}

@@ -1,0 +1,16 @@
+.link:global(.cds--link) {
+  font-size: inherit;
+  text-decoration: underline;
+
+  &:hover {
+    color: $blue-80;
+  }
+
+  &:visited {
+    color: $link-01;
+  }
+
+  &:active {
+    color: $text-01;
+  }
+}

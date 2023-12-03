@@ -1,0 +1,110 @@
+// carbon--breakpoint
+@use '@carbon/react/scss/breakpoint' as *;
+// $carbon--white-0
+@use '@carbon/react/scss/colors' as *;
+// carbon--type-style
+@use '@carbon/react/scss/type' as *;
+
+.container--dark {
+  background: $gray-100;
+  color: $gray-10;
+}
+
+.container--white {
+  background: $white-0;
+  color: $gray-100;
+}
+
+.container--g10 {
+  background: $gray-10;
+  color: $gray-100;
+}
+
+.container--dark a.cds--link,
+.container--dark a.cds--link:hover,
+.container--dark a.cds--link:active,
+.container--dark a.cds--link:active:visited,
+.container--dark a.cds--link:active:visited:hover {
+  color: $blue-40;
+}
+
+.container--dark a:focus {
+  outline-color: $blue-40;
+}
+
+// Homepage image header area
+
+.homepage--header {
+  height: 0;
+  overflow: hidden;
+  padding-top: 50%;
+  position: relative;
+
+  // Match max height at lg breakpoint
+  @include breakpoint('lg') {
+    padding: 0;
+    height: 560px;
+  }
+}
+
+.homepage--header .cds--grid,
+.homepage--header .cds--row {
+  height: 100%;
+}
+
+.container--homepage h3.homepage--header__title {
+  @include type-style('expressive-heading-03', true);
+  display: none;
+  font-weight: 600;
+  position: absolute;
+  bottom: 3.5rem;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  z-index: 3;
+
+  @include breakpoint('md') {
+    display: block;
+  }
+}
+
+.homepage--header img {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -25%;
+}
+
+.container--homepage .cds--grid {
+  margin: 0;
+
+  @include breakpoint('lg') {
+    padding-left: calc(25% + 1.5rem);
+  }
+
+  @include breakpoint('max') {
+    padding-left: 424px;
+    padding-right: 0;
+  }
+}
+
+.container--header--nav .cds--grid {
+  margin: 0;
+
+  @include breakpoint('lg') {
+    padding-left: 2rem;
+  }
+
+  @include breakpoint('max') {
+    padding-left: 2%;
+  }
+}
+
+.container--homepage .cds--col-no-gutter {
+  padding: 0;
+}
+
+.cds--side-nav__overlay-active {
+  //rel: https://github.com/carbon-design-system/carbon-website/pull/2187
+  width: 100%;
+}
