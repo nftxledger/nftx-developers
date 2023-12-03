@@ -41,16 +41,6 @@ module.exports = (themeOptions) => {
 
   const optionalPlugins = [];
 
-  if (mediumAccount) {
-    optionalPlugins.push({
-      resolve: 'gatsby-source-medium-feed',
-      options: {
-        userName: mediumAccount, // Medium user name
-        name: 'MediumFeed',
-      },
-    });
-  }
-
   if (isServiceWorkerEnabled) {
     optionalPlugins.push(`gatsby-plugin-offline`);
   }
