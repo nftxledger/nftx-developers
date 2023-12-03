@@ -51,7 +51,7 @@
     "gatsby-remark-unwrap-images": "^1.0.2",
     "gatsby-source-filesystem": "^4.25.0",
     "gatsby-source-medium-feed": "^1.0.6",
-    "gatsby-transformer-yaml": "^4.25.0",
+    "gatsby-transformer-yaml": "^5.12.0",
     "lodash.startcase": "^4.4.0",
     "lodash.throttle": "^4.1.1",
     "mkdirp": "^3.0.1",

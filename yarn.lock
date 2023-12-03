@@ -1744,6 +1744,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/runtime@npm:^7.20.13":
+  version: 7.23.5
+  resolution: "@babel/runtime@npm:7.23.5"
+  dependencies:
+    regenerator-runtime: ^0.14.0
+  checksum: 164d9802424f06908e62d29b8fd3a87db55accf82f46f964ac481dcead11ff7df8391e3696e5fa91a8ca10ea8845bf650acd730fa88cf13f8026cd8d5eec6936
+  languageName: node
+  linkType: hard
+
 "@babel/runtime@npm:^7.22.15":
   version: 7.23.1
   resolution: "@babel/runtime@npm:7.23.1"
@@ -7835,7 +7844,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"css-selector-parser@npm:^1.0.0, css-selector-parser@npm:^1.1.0":
+"css-selector-parser@npm:^1.0.0":
   version: 1.4.1
   resolution: "css-selector-parser@npm:1.4.1"
   checksum: 31948754e579eedb918c2fb2d5a4c643ec769ff4a0d03a7bd10b43b25d44973f8cbe86d7ec00c4494269f7ff38b3d2ab0f6ea801cece0ef0974e74469dff770c
@@ -8042,7 +8051,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"debug@npm:2, debug@npm:2.6.9, debug@npm:^2.2.0, debug@npm:^2.6.0":
+"debug@npm:2, debug@npm:2.6.9, debug@npm:^2.6.0":
   version: 2.6.9
   resolution: "debug@npm:2.6.9"
   dependencies:
@@ -11201,7 +11210,7 @@ __metadata:
     gatsby-remark-unwrap-images: ^1.0.2
     gatsby-source-filesystem: ^4.25.0
     gatsby-source-medium-feed: ^1.0.6
-    gatsby-transformer-yaml: ^4.25.0
+    gatsby-transformer-yaml: ^5.12.0
     lodash.startcase: ^4.4.0
     lodash.throttle: ^4.1.1
     mkdirp: ^3.0.1
@@ -11224,17 +11233,16 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"gatsby-transformer-yaml@npm:^4.25.0":
-  version: 4.25.0
-  resolution: "gatsby-transformer-yaml@npm:4.25.0"
+"gatsby-transformer-yaml@npm:^5.12.0":
+  version: 5.12.0
+  resolution: "gatsby-transformer-yaml@npm:5.12.0"
   dependencies:
-    "@babel/runtime": ^7.15.4
-    js-yaml: ^3.14.1
+    "@babel/runtime": ^7.20.13
+    js-yaml: ^4.1.0
     lodash: ^4.17.21
-    unist-util-select: ^1.5.0
   peerDependencies:
-    gatsby: ^4.0.0-next
-  checksum: 151f8c2a73900daef3f990db395563acb06037c02dda4a01c8e04a3b3a11126a8e591b408aa0a235501f4bc420248800e7a5b82a31c4a28f30d8a1762c09cd32
+    gatsby: ^5.0.0-next
+  checksum: de3143ad8f719f8bfb4f57c4e4549586bd996d7da58f401d5423510fcf6a7329a990ade12017725955c996c07bb36b913a9a8c29a5ff38202cbf27883c53ec7a
   languageName: node
   linkType: hard
 
@@ -13710,7 +13718,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"js-yaml@npm:^3.10.0, js-yaml@npm:^3.13.1, js-yaml@npm:^3.14.1":
+"js-yaml@npm:^3.10.0, js-yaml@npm:^3.13.1":
   version: 3.14.1
   resolution: "js-yaml@npm:3.14.1"
   dependencies:
@@ -16090,21 +16098,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nth-check@npm:^1.0.1, nth-check@npm:~1.0.1":
-  version: 1.0.2
-  resolution: "nth-check@npm:1.0.2"
-  dependencies:
-    boolbase: ~1.0.0
-  checksum: 59e115fdd75b971d0030f42ada3aac23898d4c03aa13371fa8b3339d23461d1badf3fde5aad251fb956aaa75c0a3b9bfcd07c08a34a83b4f9dadfdce1d19337c
-  languageName: node
-  linkType: hard
-
 "nth-check@npm:^2.0.0, nth-check@npm:^2.0.1":
   version: 2.1.1
   resolution: "nth-check@npm:2.1.1"
   dependencies:
     boolbase: ^1.0.0
   checksum: 5afc3dafcd1573b08877ca8e6148c52abd565f1d06b1eb08caf982e3fa289a82f2cae697ffb55b5021e146d60443f1590a5d6b944844e944714a5b549675bcd3
+  languageName: node
+  linkType: hard
+
+"nth-check@npm:~1.0.1":
+  version: 1.0.2
+  resolution: "nth-check@npm:1.0.2"
+  dependencies:
+    boolbase: ~1.0.0
+  checksum: 59e115fdd75b971d0030f42ada3aac23898d4c03aa13371fa8b3339d23461d1badf3fde5aad251fb956aaa75c0a3b9bfcd07c08a34a83b4f9dadfdce1d19337c
   languageName: node
   linkType: hard
 
@@ -21775,17 +21783,6 @@ __metadata:
   dependencies:
     unist-util-is: ^4.0.0
   checksum: 99e54f3ea0523f8cf957579a6e84e5b58427bffab929cc7f6aa5119581f929db683dd4691ea5483df0c272f486dda9dbd04f4ab74dca6cae1f3ebe8e4261a4d9
-  languageName: node
-  linkType: hard
-
-"unist-util-select@npm:^1.5.0":
-  version: 1.5.0
-  resolution: "unist-util-select@npm:1.5.0"
-  dependencies:
-    css-selector-parser: ^1.1.0
-    debug: ^2.2.0
-    nth-check: ^1.0.1
-  checksum: 19681874146213fc151d3faecfbb2999bbc63722b0e3cda06e769dd153f128d9bfc9350aa574878a64e322fb5de8179a87fb32ff71f0262838ef8361ac8c540c
   languageName: node
   linkType: hard
 
