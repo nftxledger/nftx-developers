@@ -53,14 +53,6 @@ const Layout = ({
         pageDescription={pageDescription}
         pageKeywords={pageKeywords}
       />
-      <div className={banner} role="contentinfo">
-        <span className={bannerText}>
-          <Information size={16} className={bannerIcon} /> This project is
-          maintained by community contributions. The original contributor,
-          Carbon Design System, is no longer involved in maintaining this
-          project.
-        </span>
-      </div>
       <Header isSwitcherEnabled={isSwitcherEnabled} />
       {isSwitcherEnabled && <Switcher />}
       <LeftNav homepage={homepage} is404Page={is404} theme={theme} />

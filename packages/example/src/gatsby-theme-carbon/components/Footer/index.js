@@ -37,6 +37,6 @@ const links = {
   ],
 };
 
-const CustomFooter = () => <Footer links={links} Content={Content} />;
+const CustomFooter = () => <></>;
 
 export default CustomFooter;
