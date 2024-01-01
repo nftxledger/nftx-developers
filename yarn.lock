@@ -1744,6 +1744,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/runtime@npm:^7.20.13":
+  version: 7.23.7
+  resolution: "@babel/runtime@npm:7.23.7"
+  dependencies:
+    regenerator-runtime: ^0.14.0
+  checksum: eba85bd24d250abb5ae19b16cffc15a54d3894d8228ace40fa4c0e2f1938f28b38ad3e3430ebff9a1ef511eeb8c527e36044ac19076d6deafa52cef35d8624b9
+  languageName: node
+  linkType: hard
+
 "@babel/runtime@npm:^7.22.15":
   version: 7.23.1
   resolution: "@babel/runtime@npm:7.23.1"
@@ -10985,21 +10994,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-remark-copy-linked-files@npm:^5.25.0":
-  version: 5.25.0
-  resolution: "gatsby-remark-copy-linked-files@npm:5.25.0"
+"gatsby-remark-copy-linked-files@npm:^6.13.0":
+  version: 6.13.0
+  resolution: "gatsby-remark-copy-linked-files@npm:6.13.0"
   dependencies:
-    "@babel/runtime": ^7.15.4
+    "@babel/runtime": ^7.20.13
     cheerio: ^1.0.0-rc.10
-    fs-extra: ^10.1.0
+    fs-extra: ^11.1.1
     is-relative-url: ^3.0.0
     lodash: ^4.17.21
     path-is-inside: ^1.0.2
     probe-image-size: ^7.2.3
     unist-util-visit: ^2.0.3
   peerDependencies:
-    gatsby: ^4.0.0-next
-  checksum: 6dac4df2cb13c677f87bb9a077e4a5eaff08dc8dc026faca57d16090d9c8fcdce5c22cb85fbcc62f2ab75ccae9bbf251750338e60b4116830cd975f7b551b656
+    gatsby: ^5.0.0-next
+  checksum: 8a0e2670c62e34955bc9bb1bfcb72a5d0f5211dc6a2e78f2be68526a172354dbc8f9fb40fa8fabdf8174513fc0d3d2748b154de0d7af44f0c1050a542663675f
   languageName: node
   linkType: hard
 
@@ -11194,7 +11203,7 @@ __metadata:
     gatsby-plugin-sass: 5.25.0
     gatsby-plugin-sass-resources: ^3.0.1
     gatsby-plugin-sharp: ^4.25.1
-    gatsby-remark-copy-linked-files: ^5.25.0
+    gatsby-remark-copy-linked-files: ^6.13.0
     gatsby-remark-images: ^6.25.0
     gatsby-remark-responsive-iframe: ^5.25.0
     gatsby-remark-smartypants: ^5.25.0
